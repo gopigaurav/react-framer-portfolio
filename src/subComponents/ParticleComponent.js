@@ -6,10 +6,6 @@ import styled from 'styled-components'
 //particle config files
 import configDark from "../config/particlesjs-config.json";
 import configLight from "../config/particlesjs-config-light.json";
-
-
-
-
 const Box = styled.div`
 position: absolute;
 top:0;
