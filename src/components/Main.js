@@ -5,6 +5,8 @@ import styled, { keyframes } from "styled-components";
 import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
+import Header from "./header/header";
+import Sticky from "react-stickynode";
 import { YinYang } from "./AllSvgs";
 import Intro from "./Intro";
 
@@ -13,7 +15,6 @@ const MainContainer = styled.div`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-
   position: relative;
 
   h2,
@@ -130,12 +131,24 @@ const Main = () => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
+  const [isSticky, setIsSticky] = useState(false);
+
+  const handleStateChange = (status) => {
+    if (status.status === Sticky.STATUS_FIXED) {
+      setIsSticky(true);
+    } else if (status.status === Sticky.STATUS_ORIGINAL) {
+      setIsSticky(false);
+    }
+  };
 
   return (
     <MainContainer>
       <DarkDiv click={click} />
       <Container>
-        <PowerButton />
+        {/*<PowerButton />*/}
+        <Sticky innerZ={1001} top={0} onStateChange={handleStateChange}>
+          <Header className={`${isSticky ? "sticky" : "unSticky"}`} />
+        </Sticky>
         <LogoComponent theme={click ? "dark" : "light"} />
         <SocialIcons theme={click ? "dark" : "light"} />
 
