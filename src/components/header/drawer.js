@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Box } from "theme-ui";
-import { Scrollbars } from "react-custom-scrollbars";
-import Drawer from "components/drawer";
+import { Scrollbars } from "react-custom-scrollbars-2";
+import Drawer from "../drawer";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { Link } from "react-scroll";
 import {
@@ -10,7 +10,7 @@ import {
   FaGithubAlt,
   FaDribbble,
 } from "react-icons/fa";
-import menuItems from "./header.data";
+import menuItems from "./headerData";
 
 const social = [
   {

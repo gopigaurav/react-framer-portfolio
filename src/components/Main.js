@@ -27,7 +27,7 @@ const MainContainer = styled.div`
 `;
 
 const Container = styled.div`
-  padding: 2rem;
+  //padding: 2rem;
 `;
 
 const Contact = styled(NavLink)`
@@ -146,12 +146,11 @@ const Main = () => {
       <DarkDiv click={click} />
       <Container>
         {/*<PowerButton />*/}
-        <Sticky innerZ={1001} top={0} onStateChange={handleStateChange}>
+        {/*<Sticky innerZ={1001} top={0} onStateChange={handleStateChange}>
           <Header className={`${isSticky ? "sticky" : "unSticky"}`} />
-        </Sticky>
-        <LogoComponent theme={click ? "dark" : "light"} />
-        <SocialIcons theme={click ? "dark" : "light"} />
-
+        </Sticky>*/}
+        {/*<LogoComponent theme={click ? "dark" : "light"} />
+        <SocialIcons theme={click ? "dark" : "light"} />*/}
         <Center click={click}>
           <YinYang
             onClick={() => handleClick()}
@@ -162,7 +161,7 @@ const Main = () => {
           <span>click here</span>
         </Center>
 
-        <Contact
+        {/*<Contact
           target="_blank"
           to={{ pathname: "mailto:codebucks27@gmail.com" }}
         >
@@ -180,7 +179,7 @@ const Main = () => {
           >
             Say hi..
           </motion.h2>
-        </Contact>
+        </Contact>*/}
         <BLOG to="/blog">
           <motion.h2
             initial={{
