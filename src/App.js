@@ -1,7 +1,7 @@
 import { Route, Switch, useLocation } from "react-router";
 import React, { useState} from "react"
 import { ThemeProvider } from "styled-components";
-import { lightTheme } from "./components/Themes";
+import { lightTheme, DarkTheme } from "./components/Themes";
 import GlobalStyle from "./globalStyles";
 //Components
 import Main from "./components/Main";
@@ -21,9 +21,9 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <ThemeProvider theme={lightTheme}>
+      <ThemeProvider theme={DarkTheme}>
         <SoundBar />
-        <LogoComponent theme={click ? "dark" : "light"} />
+        <LogoComponent theme={DarkTheme ? "dark" : "light"} />
         <SocialIcons theme={click ? "dark" : "light"} />
         {/* For framer-motion animation on page change! */}
         <AnimatePresence exitBeforeEnter>
