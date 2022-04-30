@@ -8,7 +8,6 @@ export default function Header({ className }) {
   return (
     <header sx={styles.header} className={className} id="header">
       <Container sx={styles.container}>
-        {/*<Logo src={LogoDark} />*/}
         <Flex as="nav" sx={styles.nav}>
           {menuItems.map((menuItem, i) => (
             <Link
@@ -69,7 +68,7 @@ const styles = {
     },
     "&.sticky": {
       position: "fixed",
-      backgroundColor: "background",
+      backgroundColor: "red",
       color: "#000000",
       boxShadow: "0 1px 2px rgba(0, 0, 0, 0.06)",
       py: 3,

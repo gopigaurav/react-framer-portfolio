@@ -131,24 +131,11 @@ const Main = () => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
-  const [isSticky, setIsSticky] = useState(false);
-
-  const handleStateChange = (status) => {
-    if (status.status === Sticky.STATUS_FIXED) {
-      setIsSticky(true);
-    } else if (status.status === Sticky.STATUS_ORIGINAL) {
-      setIsSticky(false);
-    }
-  };
-
   return (
     <MainContainer>
       <DarkDiv click={click} />
       <Container>
         {/*<PowerButton />*/}
-        {/*<Sticky innerZ={1001} top={0} onStateChange={handleStateChange}>
-          <Header className={`${isSticky ? "sticky" : "unSticky"}`} />
-        </Sticky>*/}
         {/*<LogoComponent theme={click ? "dark" : "light"} />
         <SocialIcons theme={click ? "dark" : "light"} />*/}
         <Center click={click}>
