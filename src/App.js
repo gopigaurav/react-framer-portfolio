@@ -35,9 +35,9 @@ function App() {
       <ThemeProvider theme={lightTheme}>
         <div>
           <SoundBar />
-          <Sticky innerZ={1001} top={0} onStateChange={handleStateChange}>
+          {/*<Sticky innerZ={1001} top={0} onStateChange={handleStateChange}>
             
-          </Sticky>
+          </Sticky>*/}
           <Header className={`${isSticky ? "sticky" : "unSticky"}`} />
           <LogoComponent theme={DarkTheme ? "dark" : "light"} />
           <SocialIcons theme={click ? "dark" : "light"} />
