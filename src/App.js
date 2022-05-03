@@ -36,8 +36,9 @@ function App() {
         <div>
           <SoundBar />
           <Sticky innerZ={1001} top={0} onStateChange={handleStateChange}>
-            <Header className={`${isSticky ? "sticky" : "unSticky"}`} />
+            
           </Sticky>
+          <Header className={`${isSticky ? "sticky" : "unSticky"}`} />
           <LogoComponent theme={DarkTheme ? "dark" : "light"} />
           <SocialIcons theme={click ? "dark" : "light"} />
           {/* For framer-motion animation on page change! */}
