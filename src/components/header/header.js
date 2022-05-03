@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
   Nav,
   NavLink,
@@ -9,11 +9,11 @@ import {
 } from "./NavbarElements";
 
 const Header = () => {
-  const [mobileView, setMobileView] = useState(false)
+  const [mobileView, setMobileView] = useState(false);
   return (
     <>
       <Nav>
-        <Bars onClick={() =>console.log("hi")}/>
+        <Bars onClick={() => console.log("hi")} />
         <NavBtn>
           <NavBtnLink to="/signin">Sign In</NavBtnLink>
         </NavBtn>
@@ -38,6 +38,9 @@ const Header = () => {
           </NavLink>
         </NavMenu>
       </Nav>
+      {mobileView && 
+      <div>
+        </div>}
     </>
   );
 };
