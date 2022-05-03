@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   Nav,
   NavLink,
@@ -9,6 +9,7 @@ import {
 } from "./NavbarElements";
 
 const Header = () => {
+  const [mobileView, setMobileView] = useState(false)
   return (
     <>
       <Nav>
