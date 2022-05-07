@@ -1,6 +1,4 @@
 import React, { useEffect, useState, useRef } from "react"
-//Context
-import { useGlobalStateContext } from "../context/globalContext"
 // Styled Components
 export const Cursor = styled.div`
   position: fixed;
