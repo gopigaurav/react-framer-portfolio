@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom"
 import {
   Nav,
   NavLink,
@@ -6,16 +7,31 @@ import {
   NavMenu,
   NavBtn,
   NavBtnLink,
+  Logo
 } from "./NavbarElements";
-
+import useWindowSize from "../useWindowHooks"
+import SoundBar from "../../subComponents/SoundBar";
 const Header = () => {
   const [mobileView, setMobileView] = useState(false);
+  console.log(useWindowSize())
   return (
     <>
       <Nav>
         <Bars onClick={() => console.log("hi")} />
         <NavBtn>
-          <NavBtnLink to="/signin">Sign In</NavBtnLink>
+          <Logo
+            //onMouseEnter={() => onCursor("hovered")}
+            //onMouseLeave={onCursor}
+          >
+            <Link to="/">G</Link>
+            <span
+              //onClick={toggleTheme}
+              //onMouseEnter={() => onCursor("pointer")}
+              //onMouseLeave={onCursor}
+            ></span>
+            <Link to="/">PI</Link>
+          </Logo>
+          <SoundBar />
         </NavBtn>
         <NavMenu>
           <NavLink to="/about" activeStyle>

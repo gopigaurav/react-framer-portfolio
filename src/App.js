@@ -12,9 +12,9 @@ import SocialIcons from "./subComponents/SocialIcons";
 import WorkPage from "./components/WorkPage";
 import MySkillsPage from "./components/MySkillsPage";
 import { AnimatePresence } from "framer-motion";
-import SoundBar from "./subComponents/SoundBar";
 import Sticky from "react-stickynode";
 import Header from "./components/header/header";
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
   const location = useLocation();
@@ -34,10 +34,7 @@ function App() {
       <GlobalStyle />
       <ThemeProvider theme={lightTheme}>
         <div>
-          <SoundBar />
-          {/*<Sticky innerZ={1001} top={0} onStateChange={handleStateChange}>
-            
-          </Sticky>*/}
+          <CustomCusor/>
           <Header className={`${isSticky ? "sticky" : "unSticky"}`} />
           <LogoComponent theme={DarkTheme ? "dark" : "light"} />
           <SocialIcons theme={click ? "dark" : "light"} />

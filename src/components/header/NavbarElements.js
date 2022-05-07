@@ -12,6 +12,7 @@ export const Nav = styled.nav`
   position: fixed;
   padding: 0;
   width: 100%;
+  margin: auto;
   /* Third Nav */
 `;
 
@@ -58,19 +59,16 @@ white-space: nowrap; */
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
-  margin-right: 24px;
-  /* Third Nav */
-  /* justify-content: flex-end;
-width: 100vw; */
+  justify-content: space-between;
+  width: 20%;
+  margin-left:25px;
   @media screen and (max-width: 768px) {
-    display: none;
+    
   }
 `;
 
-export const NavBtnLink = styled(Link)`
+export const NavBtnLink = styled.div`
   border-radius: 4px;
-  background: #808080;
-  padding: 10px 22px;
   color: #000000;
   outline: none;
   border: none;
@@ -85,3 +83,25 @@ export const NavBtnLink = styled(Link)`
     color: #808080;
   }
 `;
+
+/* header */
+export const Logo = styled.div`
+  a {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 800;
+    color: #000;
+    color: ${props => props.theme.text};
+  }
+  span {
+    height: 16px;
+    width: 16px;
+    background: #ea291e;
+    margin: 0 4px;
+    border-radius: 100%;
+    display: inline-block;
+    position: relative;
+    bottom: 2px;
+  }
+`
