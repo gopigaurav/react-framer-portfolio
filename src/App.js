@@ -34,7 +34,7 @@ function App() {
       <GlobalStyle />
       <ThemeProvider theme={lightTheme}>
         <div>
-          <CustomCusor/>
+          <CustomCursor/>
           <Header className={`${isSticky ? "sticky" : "unSticky"}`} />
           <LogoComponent theme={DarkTheme ? "dark" : "light"} />
           <SocialIcons theme={click ? "dark" : "light"} />
