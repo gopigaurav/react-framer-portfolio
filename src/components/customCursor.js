@@ -44,7 +44,7 @@ export const Cursor = styled.div`
   }
 `
 const CustomCursor = ({ toggleMenu }) => {
-  const { cursorType } = useGlobalStateContext()
+  const cursorType = false
   const cursor = useRef(null)
 
   const onMouseMove = event => {
@@ -62,7 +62,7 @@ const CustomCursor = ({ toggleMenu }) => {
   return (
     <>
       <Cursor
-        className={`${!!cursorType ? "hovered" : ""} ${cursorType} ${
+        className={`${cursorType ? "hovered" : ""} ${cursorType} ${
           toggleMenu ? "nav-open" : ""
         }`}
         ref={cursor}

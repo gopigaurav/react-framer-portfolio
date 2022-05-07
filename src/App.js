@@ -34,7 +34,7 @@ function App() {
       <GlobalStyle />
       <ThemeProvider theme={lightTheme}>
         <div>
-          <CustomCursor toggleMenu={false}/>
+          <CustomCursor toggleMenu={false} />
           <Header className={`${isSticky ? "sticky" : "unSticky"}`} />
           <LogoComponent theme={DarkTheme ? "dark" : "light"} />
           <SocialIcons theme={click ? "dark" : "light"} />
