@@ -15,7 +15,7 @@ export const Cursor = styled.div`
   will-change: width, height, transform, border;
   pointer-events: none;
   z-index: 999;
-  box-shadow: 0px 5px 2px 2px #0ff;
+  box-shadow: 0px 0px 12px 2px ${props => props.themelight ? "#0c0c0d": "#d8bcbc" } ;
   &.pointer {
     border: 4px solid ${props => props.theme.text} !important;
   }
@@ -65,6 +65,7 @@ const CustomCursor = ({ toggleMenu }) => {
         className={`${cursorType ? "hovered" : ""} ${cursorType} ${
           toggleMenu ? "nav-open" : ""
         }`}
+        themelight={true}
         ref={cursor}
       />
     </>

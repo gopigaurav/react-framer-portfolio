@@ -27,7 +27,7 @@ const Main = styled.div`
   height: 60vh;
   z-index: 3;
   line-height: 1.5;
-  cursor: pointer;
+  //cursor: pointer;
 
   font-family: "Ubuntu Mono", monospace;
   display: flex;

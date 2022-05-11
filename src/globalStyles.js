@@ -1,8 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-
-
-
 const GlobalStyle = createGlobalStyle`
 
 *,*::before,*::after,h1,h2,h3,h4,h5,h6{
@@ -19,8 +16,10 @@ body{
     padding: 0;
     overflow-x: hidden;
     font-family: 'Josefin Sans', sans-serif;
+    cursor: none !important;
+
 }
 
-`
+`;
 
 export default GlobalStyle;

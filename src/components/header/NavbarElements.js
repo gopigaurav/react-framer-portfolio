@@ -23,7 +23,7 @@ export const NavLink = styled(Link)`
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
-  cursor: pointer;
+  cursor: none;
   &.active {
     color: #000000;
   }
@@ -39,7 +39,7 @@ export const Bars = styled(FaBars)`
     right: 0;
     transform: translate(-100%, 75%);
     font-size: 1.8rem;
-    cursor: pointer;
+    //cursor: pointer;
   }
 `;
 
@@ -72,7 +72,7 @@ export const NavBtnLink = styled.div`
   color: #000000;
   outline: none;
   border: none;
-  cursor: pointer;
+  //cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   /* Second Nav */
