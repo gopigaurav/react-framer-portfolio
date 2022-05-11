@@ -1,19 +1,21 @@
 import React, { useEffect, useState, useRef } from "react"
+import styled from "styled-components"
 // Styled Components
 export const Cursor = styled.div`
   position: fixed;
   top: 400px;
   left: 400px;
-  width: 32px;
-  height: 32px;
-  background: #ea281e;
+  width: 15px;
+  height: 15px;
+  background: black;
   border-radius: 100%;
   transform: translate(-50%, -50%);
-  transition: all 0.1s ease-out;
+  transition: all 0.5s ease;
   transition-property: width, height, border;
   will-change: width, height, transform, border;
   pointer-events: none;
   z-index: 999;
+  box-shadow: 0px 5px 2px 2px #0ff;
   &.pointer {
     border: 4px solid ${props => props.theme.text} !important;
   }

@@ -7,14 +7,13 @@ import GlobalStyle from "./globalStyles";
 import Main from "./components/Main";
 import AboutPage from "./components/AboutPage";
 import BlogPage from "./components/BlogPage";
-import LogoComponent from "./subComponents/LogoComponent";
 import SocialIcons from "./subComponents/SocialIcons";
 import WorkPage from "./components/WorkPage";
 import MySkillsPage from "./components/MySkillsPage";
 import { AnimatePresence } from "framer-motion";
 import Sticky from "react-stickynode";
 import Header from "./components/header/header";
-import CustomCursor from "./components/CustomCursor";
+import CustomCursor from "./components/customCursor";
 
 function App() {
   const location = useLocation();
@@ -36,7 +35,6 @@ function App() {
         <div>
           <CustomCursor toggleMenu={false} />
           <Header className={`${isSticky ? "sticky" : "unSticky"}`} />
-          <LogoComponent theme={DarkTheme ? "dark" : "light"} />
           <SocialIcons theme={click ? "dark" : "light"} />
           {/* For framer-motion animation on page change! */}
           <AnimatePresence exitBeforeEnter>
