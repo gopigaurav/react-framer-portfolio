@@ -11,13 +11,13 @@ const MainContainer = styled.div`
   height: 100vh;
   overflow: hidden;
   position: relative;
-
   h2,
   h3,
   h4,
   h5,
   h6 {
     font-weight: 500;
+    cursor: none;
   }
 `;
 
@@ -32,6 +32,7 @@ const Contact = styled(NavLink)`
   right: calc(1rem + 2vw);
   text-decoration: none;
   z-index: 1;
+  cursor: none;
 `;
 const BLOG = styled(NavLink)`
   color: ${(props) => props.theme.text};
@@ -41,10 +42,10 @@ const BLOG = styled(NavLink)`
   transform: rotate(90deg) translate(-50%, -50%);
   text-decoration: none;
   z-index: 1;
+
 `;
 const WORK = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
-
   position: absolute;
   top: 50%;
   left: calc(1rem + 2vw);
@@ -59,7 +60,7 @@ const BottomBar = styled.div`
   left: 0;
   right: 0;
   width: 100%;
-
+  cursor: none;
   display: flex;
   justify-content: space-evenly;
 `;
