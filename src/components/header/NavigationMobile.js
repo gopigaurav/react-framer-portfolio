@@ -1,7 +1,6 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
+import { Link } from "react-router-dom"
 //Styled Components
-import { Container, Flex } from "../styles/globalStyles"
 import {
   Nav,
   NavHeader,
@@ -9,10 +8,12 @@ import {
   NavFooter,
   NavVideos,
   CloseNav,
-} from "../styles/navigationStyles"
-import { FooterContent, FooterSocial } from "../styles/footerStyles"
+  Container,
+   Flex
+} from "./NavigationStyles"
+import { FooterContent, FooterSocial } from "./footerStyles"
 //Icons
-import { Instagram, Facebook, Vimeo } from "../assets/svg/social-icons"
+import { Instagram, Facebook, Vimeo } from "../../assets/svg/social-icons"
 //Framer Motion
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -180,7 +181,7 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
                   <AnimatePresence initial={false} exitBeforeEnter>
                     <motion.video
                       key={revealVideo.key}
-                      src={require(`../assets/video/${revealVideo.video}`)}
+                      //src={require(`../assets/video/${revealVideo.video}`)}
                       initial={{ opacity: 0 }}
                       exit={{ opacity: 0 }}
                       animate={{

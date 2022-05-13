@@ -3,7 +3,7 @@
 export const Work = [
     {
         id:1,
-        name:"Agency Landing Page",
+        name:"Tesla Clone",
         description:"It is build on top of the React JS, with styledComponents and GSAP for smooth scrolling animations.",
         tags:["react","gsap","styledComponents"],
         
@@ -12,7 +12,7 @@ export const Work = [
     },
     {
         id:2,
-        name:"Job listing website",
+        name:"Hulu Clone",
         description:"A Job listing website build in ReactJS. With searching and filtering functionalities.",
         tags:["react","sass"],
         
@@ -22,7 +22,7 @@ export const Work = [
     },
     {
         id:3,
-        name:"Dev.to Clone",
+        name:"tinder Clone",
         description:"A clone of Dev.to build using ReactJS. With realtime fetching of articles from dev.to using API.",
         tags:["react","api","sass"],
         
@@ -31,7 +31,7 @@ export const Work = [
     },
     {
         id:4,
-        name:"Sidebar Menu",
+        name:"Netflix Clone",
         description:"A cool looking sidebar menu build using ReactJS and styledComponents.It has really smooth animations.",
         tags:["react","styledComponents","react-router"],
         
@@ -40,8 +40,38 @@ export const Work = [
        
     },
     {
+        id:5,
+        name:"Amazon Clone",
+        description:"A reponsive navbar menu component in ReactJS with react-router functionalities. Built from scratch.",
+        tags:["react","react-router","css"],
+        
+        demo:"http://react-responsive-navbar-codebucks27.vercel.app/",
+        github:"https://github.com/codebucks27/React-responsive-navbar"
+        
+    },
+    {
         id:6,
-        name:"Responsive Navigation Menu",
+        name:"Amazon Clone",
+        description:"A reponsive navbar menu component in ReactJS with react-router functionalities. Built from scratch.",
+        tags:["react","react-router","css"],
+        
+        demo:"http://react-responsive-navbar-codebucks27.vercel.app/",
+        github:"https://github.com/codebucks27/React-responsive-navbar"
+        
+    },
+    {
+        id:7,
+        name:"Amazon Clone",
+        description:"A reponsive navbar menu component in ReactJS with react-router functionalities. Built from scratch.",
+        tags:["react","react-router","css"],
+        
+        demo:"http://react-responsive-navbar-codebucks27.vercel.app/",
+        github:"https://github.com/codebucks27/React-responsive-navbar"
+        
+    },
+    {
+        id:8,
+        name:"Amazon Clone",
         description:"A reponsive navbar menu component in ReactJS with react-router functionalities. Built from scratch.",
         tags:["react","react-router","css"],
         

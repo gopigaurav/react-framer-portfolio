@@ -11,13 +11,15 @@ import {
 } from "./NavbarElements";
 import useWindowSize from "../useWindowHooks"
 import SoundBar from "../../subComponents/SoundBar";
+import MobileNav from "./NavigationMobile"
 const Header = () => {
   const [mobileView, setMobileView] = useState(false);
-  console.log(useWindowSize())
+  const {widthx, heighty} = useWindowSize()
+
   return (
     <>
       <Nav>
-        <Bars onClick={() => console.log("hi")} />
+        <Bars onClick={() => setMobileView(true)} />
         <NavBtn>
           <Logo
             //onMouseEnter={() => onCursor("hovered")}
@@ -54,9 +56,7 @@ const Header = () => {
           </NavLink>
         </NavMenu>
       </Nav>
-      {mobileView && 
-      <div>
-        </div>}
+      {mobileView && <MobileNav toggleMenu={mobileView}/>}
     </>
   );
 };
