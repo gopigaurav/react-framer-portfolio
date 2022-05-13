@@ -23,7 +23,6 @@ const Power = styled.button`
   align-items: center;
   z-index: 3;
 
-  //cursor: pointer;
 
   &:hover {
     background-color: rgba(0, 255, 0, 0.4);

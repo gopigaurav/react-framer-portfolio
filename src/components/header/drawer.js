@@ -105,7 +105,6 @@ const styles = {
     top: "25px",
     right: "30px",
     zIndex: "1",
-    //cursor: "pointer",
   },
 
   content: {
@@ -127,7 +126,6 @@ const styles = {
       fontWeight: "500",
       color: "text_white",
       py: "15px",
-      //cursor: "pointer",
       borderBottom: "1px solid #e8e5e5",
       transition: "all 0.25s",
       "&:hover": {
@@ -161,7 +159,6 @@ const styles = {
       fontSize: 14,
       mr: "15px",
       transition: "all 0.25s",
-      //cursor: "pointer",
       ":last-child": {
         mr: "0",
       },
@@ -177,7 +174,6 @@ const styles = {
     fw: "700",
     height: "45px",
     borderRadius: "5px",
-    //cursor: "pointer",
     width: "100%",
     display: "flex",
     alignItems: "center",

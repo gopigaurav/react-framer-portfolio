@@ -5,7 +5,6 @@ import music from "../assets/audio/u-said-it-v13-1167.mp3";
 
 const Box = styled.div`
   display: flex;
-  //cursor: pointer;
   left: 8rem;
   top: 3rem;
   z-index: 10;

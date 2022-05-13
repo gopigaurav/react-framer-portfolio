@@ -17,7 +17,6 @@ const MainContainer = styled.div`
   h5,
   h6 {
     font-weight: 500;
-    cursor: none;
   }
 `;
 
@@ -32,7 +31,6 @@ const Contact = styled(NavLink)`
   right: calc(1rem + 2vw);
   text-decoration: none;
   z-index: 1;
-  cursor: none;
 `;
 const BLOG = styled(NavLink)`
   color: ${(props) => props.theme.text};
@@ -60,7 +58,6 @@ const BottomBar = styled.div`
   left: 0;
   right: 0;
   width: 100%;
-  cursor: none;
   display: flex;
   justify-content: space-evenly;
 `;
@@ -93,7 +90,6 @@ const Center = styled.button`
   border: none;
   outline: none;
   background-color: transparent;
-  //cursor: pointer;
 
   display: flex;
   flex-direction: column;

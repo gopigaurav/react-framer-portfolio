@@ -9,7 +9,9 @@ const GlobalStyle = createGlobalStyle`
 h1,h2,h3,h4,h5,h6{
     display: inline-block;
 }
-
+a:-webkit-any-link{
+    cursor: none ;
+}
 
 body{
     margin: 0;
@@ -17,7 +19,6 @@ body{
     overflow-x: hidden;
     font-family: 'Josefin Sans', sans-serif;
     cursor: none !important;
-
 }
 
 `;
