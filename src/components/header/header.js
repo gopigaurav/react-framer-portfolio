@@ -56,7 +56,7 @@ const Header = () => {
           </NavLink>
         </NavMenu>
       </Nav>
-      {mobileView && <MobileNav toggleMenu={mobileView}/>}
+      {mobileView && <MobileNav toggleMenu={mobileView} setToggleMenu={setMobileView}/>}
     </>
   );
 };

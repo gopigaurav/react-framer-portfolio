@@ -1,5 +1,5 @@
-import styled, { css }from "styled-components"
-import { motion } from "framer-motion"
+import styled, { css } from "styled-components";
+import { motion } from "framer-motion";
 
 export const Nav = styled(motion.div)`
   position: fixed;
@@ -12,14 +12,20 @@ export const Nav = styled(motion.div)`
   color: #000;
   z-index: 100;
   overflow: hidden;
-`
+`;
+export const NavHead = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`;
 export const Container = styled.div`
   flex-grow: 1;
   margin: 0 auto;
   padding: 0 32px;
   position: relative;
   width: auto;
-  z-index:5555555;
+  z-index: 5555555;
   height: 100%;
   @media (min-width: 1024px) {
     max-width: 960px;
@@ -31,7 +37,7 @@ export const Container = styled.div`
     max-width: 1244px;
   }
 
-  ${props =>
+  ${(props) =>
     props.fluid &&
     css`
       padding: 0;
@@ -39,41 +45,41 @@ export const Container = styled.div`
       background: red;
       max-width: 100% !important;
     `}
-`
+`;
 
 export const Flex = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  ${props =>
+  ${(props) =>
     props.spaceBetween &&
     css`
       justify-content: space-between;
     `};
-  ${props =>
+  ${(props) =>
     props.flexEnd &&
     css`
       justify-content: flex-end;
     `};
-  ${props =>
+  ${(props) =>
     props.alignTop &&
     css`
       align-items: flex-start;
     `};
-  ${props =>
+  ${(props) =>
     props.noHeight &&
     css`
       height: 0;
     `};
-`
+`;
 
 export const NavHeader = styled.div`
   top: 72px;
   position: relative;
   h2 {
-    color: ${props => props.theme.background};
+    color: ${(props) => props.theme.background};
   }
-`
+`;
 export const CloseNav = styled.div`
   button {
     transform-origin: center;
@@ -85,11 +91,11 @@ export const CloseNav = styled.div`
       width: 36px;
       height: 8px;
       display: block;
-      background: ${props => props.theme.background};
+      background: ${(props) => props.theme.background};
       margin: 8px;
     }
   }
-`
+`;
 
 export const NavList = styled.div`
   height: 100%;
@@ -107,7 +113,7 @@ export const NavList = styled.div`
       line-height: 96px;
       overflow: hidden;
       .link {
-        color: ${props => props.theme.background};
+        color: ${(props) => props.theme.background};
         position: relative;
         display: flex;
         align-items: center;
@@ -119,12 +125,12 @@ export const NavList = styled.div`
       svg {
         width: 100px;
         path {
-          fill: ${props => props.theme.background};
+          fill: ${(props) => props.theme.background};
         }
       }
     }
   }
-`
+`;
 export const NavFooter = styled.div`
   position: absolute;
   bottom: 0;
@@ -132,12 +138,12 @@ export const NavFooter = styled.div`
   width: 100%;
   padding: 56px 0px;
   p {
-    color: ${props => props.theme.background};
+    color: ${(props) => props.theme.background};
   }
   svg path {
-    fill: ${props => props.theme.background};
+    fill: ${(props) => props.theme.background};
   }
-`
+`;
 
 export const NavVideos = styled.div`
   position: absolute;
@@ -167,4 +173,4 @@ export const NavVideos = styled.div`
       height: 100%;
     }
   }
-`
+`;

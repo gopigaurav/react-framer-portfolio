@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 //Styled Components
 import {
   Nav,
@@ -9,13 +9,15 @@ import {
   NavVideos,
   CloseNav,
   Container,
-   Flex
-} from "./NavigationStyles"
-import { FooterContent, FooterSocial } from "./footerStyles"
+  Flex,
+  NavHead
+} from "./NavigationStyles";
+import { Logo } from "./NavbarElements";
+import { FooterContent, FooterSocial } from "./footerStyles";
 //Icons
-import { Instagram, Facebook, Vimeo } from "../../assets/svg/social-icons"
+import { Instagram, Facebook, Vimeo } from "../../assets/svg/social-icons";
 //Framer Motion
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion";
 
 const navRoutes = [
   {
@@ -48,14 +50,14 @@ const navRoutes = [
     path: "/50-beaches",
     video: "50-beaches.mp4",
   },
-]
+];
 
 const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
   const [revealVideo, setRevealVideo] = useState({
     show: false,
     video: "featured-video.mp4",
     key: "0",
-  })
+  });
 
   return (
     <>
@@ -70,11 +72,25 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
             <Container>
               <NavHeader>
                 <Flex spaceBetween noHeight>
-                  <h2 to="/">Projects</h2>
+                  <NavHead>
+                    <Logo
+                    //onMouseEnter={() => onCursor("hovered")}
+                    //onMouseLeave={onCursor}
+                    >
+                      <Link to="/">G</Link>
+                      <span
+                      //onClick={toggleTheme}
+                      //onMouseEnter={() => onCursor("pointer")}
+                      //onMouseLeave={onCursor}
+                      ></span>
+                      <Link to="/">PI</Link>
+                    </Logo>
+                    <p>X</p>
+                  </NavHead>
                   <CloseNav
                     onClick={() => setToggleMenu(!toggleMenu)}
-                    onMouseEnter={() => onCursor("pointer")}
-                    onMouseLeave={onCursor}
+                    //onMouseEnter={() => onCursor("pointer")}
+                    //onMouseLeave={onCursor}
                   >
                     <button>
                       <span></span>
@@ -85,29 +101,29 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
               </NavHeader>
               <NavList>
                 <ul>
-                  {navRoutes.map(route => (
+                  {navRoutes.map((route) => (
                     <motion.li
                       key={route.id}
-                      onMouseEnter={() => onCursor("pointer")}
-                      onMouseLeave={onCursor}
-                      onHoverStart={() =>
+                      //onMouseEnter={() => onCursor("pointer")}
+                      //onMouseLeave={onCursor}
+                      /*onHoverStart={() =>
                         setRevealVideo({
                           show: true,
                           video: route.video,
                           key: route.id,
                         })
-                      }
-                      onHoverEnd={() =>
+                      }*/
+                      /*onHoverEnd={() =>
                         setRevealVideo({
                           show: false,
                           video: route.video,
                           key: route.id,
                         })
-                      }
+                      }*/
                     >
                       <Link to={`/projects${route.path}`}>
                         <motion.div
-                          initial={{ x: -108 }}
+                          //initial={{ x: -108 }}
                           className="link"
                           whileHover={{
                             x: -40,
@@ -116,8 +132,9 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
                               ease: [0.6, 0.05, -0.01, 0.9],
                             },
                           }}
+                          style={{ fontSize: "50%" }}
                         >
-                          <span className="arrow">
+                          {/*<span className="arrow">
                             <motion.svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 101 57"
@@ -128,7 +145,7 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
                                 fillRule="evenodd"
                               ></path>
                             </motion.svg>
-                          </span>
+                          </span>*/}
                           {route.title}
                         </motion.div>
                       </Link>
@@ -146,24 +163,24 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
                   </FooterContent>
                   <FooterSocial>
                     <a
-                      onMouseEnter={() => onCursor("pointer")}
-                      onMouseLeave={onCursor}
+                      //onMouseEnter={() => onCursor("pointer")}
+                      //onMouseLeave={onCursor}
                       href="/"
                       target="_blank"
                     >
                       <Instagram />
                     </a>
                     <a
-                      onMouseEnter={() => onCursor("pointer")}
-                      onMouseLeave={onCursor}
+                      //onMouseEnter={() => onCursor("pointer")}
+                      //onMouseLeave={onCursor}
                       href="/"
                       target="_blank"
                     >
                       <Facebook />
                     </a>
                     <a
-                      onMouseEnter={() => onCursor("pointer")}
-                      onMouseLeave={onCursor}
+                      //onMouseEnter={() => onCursor("pointer")}
+                      //onMouseLeave={onCursor}
                       href="/"
                       target="_blank"
                     >
@@ -199,7 +216,7 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
         )}
       </AnimatePresence>
     </>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;
