@@ -14,7 +14,7 @@ import SoundBar from "../../subComponents/SoundBar";
 import MobileNav from "./NavigationMobile"
 const Header = () => {
   const [mobileView, setMobileView] = useState(false);
-  const {widthx, heighty} = useWindowSize()
+  const {width, height} = useWindowSize()
 
   return (
     <>
@@ -56,7 +56,8 @@ const Header = () => {
           </NavLink>
         </NavMenu>
       </Nav>
-      {mobileView && <MobileNav toggleMenu={mobileView} setToggleMenu={setMobileView}/>}
+      {width < 770 && <MobileNav toggleMenu={mobileView} setToggleMenu={setMobileView}/>}
+      
     </>
   );
 };

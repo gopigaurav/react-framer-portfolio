@@ -65,7 +65,7 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
         {toggleMenu && (
           <Nav
             initial={{ x: "-100%" }}
-            exit={{ x: "-100%" }}
+            exit={{ x: "-100%", duration: 0.8 }}
             animate={{ x: toggleMenu ? 0 : "-100%" }}
             transition={{ duration: 0.8, ease: [0.6, 0.05, -0.01, 0.9] }}
           >
@@ -85,18 +85,8 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
                       ></span>
                       <Link to="/">PI</Link>
                     </Logo>
-                    <p>X</p>
+                    <p onClick={() => setToggleMenu(!toggleMenu)}>X</p>
                   </NavHead>
-                  <CloseNav
-                    onClick={() => setToggleMenu(!toggleMenu)}
-                    //onMouseEnter={() => onCursor("pointer")}
-                    //onMouseLeave={onCursor}
-                  >
-                    <button>
-                      <span></span>
-                      <span></span>
-                    </button>
-                  </CloseNav>
                 </Flex>
               </NavHeader>
               <NavList>
@@ -126,7 +116,7 @@ const Navigation = ({ toggleMenu, setToggleMenu, onCursor }) => {
                           //initial={{ x: -108 }}
                           className="link"
                           whileHover={{
-                            x: -40,
+                            x: 10,
                             transition: {
                               duration: 0.4,
                               ease: [0.6, 0.05, -0.01, 0.9],
